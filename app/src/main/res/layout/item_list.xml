@@ -6,59 +6,59 @@
     android:layout_height="wrap_content">
 
     <TextView
-        android:id="@+id/textViewNombre"
+        android:id="@+id/textViewName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="nombre"
         android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toEndOf="@+id/imageViewPhoto"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageViewType"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textViewNombre"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textViewNombre"
+        app:layout_constraintTop_toTopOf="@+id/textViewName"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/textViewVida"
+        android:id="@+id/textViewLife"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="vida"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/textViewNombre" />
+        app:layout_constraintStart_toEndOf="@+id/imageViewPhoto"
+        app:layout_constraintTop_toBottomOf="@+id/textViewName" />
 
     <TextView
-        android:id="@+id/textViewFuerza"
+        android:id="@+id/textViewStrength"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:text="fuerza"
-        app:layout_constraintBottom_toBottomOf="@+id/textViewVida"
-        app:layout_constraintStart_toEndOf="@+id/textViewVida"
-        app:layout_constraintTop_toTopOf="@+id/textViewVida" />
+        app:layout_constraintBottom_toBottomOf="@+id/textViewLife"
+        app:layout_constraintStart_toEndOf="@+id/textViewLife"
+        app:layout_constraintTop_toTopOf="@+id/textViewLife" />
 
     <TextView
-        android:id="@+id/textViewDefensa"
+        android:id="@+id/textViewDefense"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:text="defensa"
-        app:layout_constraintBottom_toBottomOf="@+id/textViewFuerza"
-        app:layout_constraintStart_toEndOf="@+id/textViewFuerza"
-        app:layout_constraintTop_toTopOf="@+id/textViewFuerza"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewStrength"
+        app:layout_constraintStart_toEndOf="@+id/textViewStrength"
+        app:layout_constraintTop_toTopOf="@+id/textViewStrength"
         app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageViewPhoto"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginStart="8dp"
