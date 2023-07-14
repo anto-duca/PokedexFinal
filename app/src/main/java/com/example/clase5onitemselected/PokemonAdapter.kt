@@ -1,5 +1,6 @@
 package com.example.clase5onitemselected
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,9 +9,11 @@ import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+
 //import com.bumptech.glide.Glide
 
-class PokemonAdapter() : ListAdapter<Pokemon, PokemonAdapter.ViewHolder>(DiffCallBack) {
+class PokemonAdapter(val context: Context) : ListAdapter<Pokemon, PokemonAdapter.ViewHolder>(DiffCallBack) {
 
     lateinit var onItemClickListener: (Pokemon) -> Unit
 
@@ -39,13 +42,10 @@ class PokemonAdapter() : ListAdapter<Pokemon, PokemonAdapter.ViewHolder>(DiffCal
 
             imageType.setImageResource(image)
 
-            // Glide.with(context)
-                //    .load(pokemon.url)
-            //   .into(imagePokemon)
-
-            //view.setOnClickListener {
-            //    onItemClickListener(pokemon)
-            // }
+            //Traigo la imagen de la URL con GLIDE
+            Glide.with(context)
+                .load(pokemon.url)
+                .into(imagePokemon)
         }
     }
 

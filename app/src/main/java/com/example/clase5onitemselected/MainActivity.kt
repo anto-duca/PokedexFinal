@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         //Adapter
-        adapter = PokemonAdapter()
+        adapter = PokemonAdapter(applicationContext)
         recyclerView.adapter = adapter
         adapter.submitList(getPokemonList()) //Le submiteamos un listado a través de esa función
 
