@@ -46,6 +46,10 @@ class PokemonAdapter(val context: Context) : ListAdapter<Pokemon, PokemonAdapter
             Glide.with(context)
                 .load(pokemon.url)
                 .into(imagePokemon)
+
+            view.setOnClickListener {
+                onItemClickListener(pokemon)
+            }
         }
     }
 

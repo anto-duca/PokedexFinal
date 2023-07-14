@@ -1,5 +1,6 @@
 package com.example.clase5onitemselected
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -22,7 +23,12 @@ class MainActivity : AppCompatActivity() {
         adapter = PokemonAdapter(applicationContext)
         recyclerView.adapter = adapter
         adapter.submitList(getPokemonList()) //Le submiteamos un listado a través de esa función
-
+        adapter.onItemClickListener = {
+            val intent = Intent(this, DetailActivity::class.java)
+            intent.putExtra("name", it.name)
+            intent.putExtra("url", it.url)
+            startActivity(intent)
+        }
     }
 
     private fun getPokemonList(): MutableList<Pokemon>? {
